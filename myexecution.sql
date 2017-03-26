@@ -1,4 +1,5 @@
 set serveroutput on
+/* create global tempory tables for results */
 create global temporary table patient_info
 ( patient_name varchar2(30),
   patient_type varchar2(10),
@@ -30,12 +31,14 @@ begin
 	dbms_output.put_line(flag);
 end;
 /
+/* Populate the tables and trigger triggers. */
 exec DBMS_OUTPUT.PUT_LINE('populate Patient_chart')
 @populate
 
 exec DBMS_OUTPUT.PUT_LINE('populate Ward tables')
 exec populate_db
 
+/* Display populate results */
 exec DBMS_OUTPUT.PUT_LINE('Display complete schedule for each patient')
 select* from general_ward;
 select* from screening_ward;
@@ -49,9 +52,11 @@ select* from dr_schedule;
 exec DBMS_OUTPUT.PUT_LINE('Display Surgeon schedule table')
 exec populate_surgeon_schedule
 select* from surgeon_schedule;
-
+/* Execture procedures */
 exec DBMS_OUTPUT.PUT_LINE('Verify the table')
 exec pro_verify
+
+/* Create a view */
 exec DBMS_OUTPUT.PUT_LINE('Display Patient_surgery_view')
 create table type_surgeon
 ( patient_type varchar2(10),
@@ -75,6 +80,7 @@ select* from patient_surgery_view;
 drop view patient_surgery;
 drop type_surgeon;
 
+/* Execute procedures */
 exec DBMS_OUTPUT.PUT_LINE('Query #1')
 exec pro_1
 exec DBMS_OUTPUT.PUT_LINE('Query #2')
