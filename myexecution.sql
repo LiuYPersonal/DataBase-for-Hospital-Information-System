@@ -80,7 +80,7 @@ select* from patient_surgery_view;
 drop view patient_surgery;
 drop type_surgeon;
 
-/* Execute procedures */
+/* Execute procedures to get query results*/
 exec DBMS_OUTPUT.PUT_LINE('Query #1')
 exec pro_1
 exec DBMS_OUTPUT.PUT_LINE('Query #2')
