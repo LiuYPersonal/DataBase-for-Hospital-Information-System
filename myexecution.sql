@@ -34,7 +34,7 @@ end;
 /* Populate the tables and trigger triggers. */
 exec DBMS_OUTPUT.PUT_LINE('populate Patient_chart')
 @populate
-
+/* Execute procedure to populate other tables */
 exec DBMS_OUTPUT.PUT_LINE('populate Ward tables')
 exec populate_db
 
