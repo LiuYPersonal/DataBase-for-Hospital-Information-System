@@ -1,5 +1,5 @@
 /*1*/
-/* arrange patient to general ward */
+/* arrange patient to screening ward */
 create or replace trigger trg_gen
 before insert on general_ward
 for each row
@@ -70,6 +70,7 @@ begin
 end;
 /
 /*2*/
+/* arrange patient to pre-surgery ward*/
 create or replace trigger trg_scr
 before insert on screening_ward
 for each row
@@ -147,6 +148,7 @@ begin
 end;
 /
 /*3*/
+/* arrange patient to post surgery ward */
 create or replace trigger trg_post
 after insert on post_surgery_ward
 declare
