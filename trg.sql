@@ -1,4 +1,5 @@
 /*1*/
+/* arrange patient to general ward */
 create or replace trigger trg_gen
 before insert on general_ward
 for each row
