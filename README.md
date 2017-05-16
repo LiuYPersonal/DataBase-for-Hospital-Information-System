@@ -1,7 +1,9 @@
-# DataBase-for-Hospital-Information-System
-Course Project
+# Hospital-Information-System
 
-This project is based on Oracle SQL. By implementing triggers, procedures and functions, it will alloq management of schedules related to doctor and patient activities and billing information regarding insurance reimbursement.
-<b>creat.sql </b> creates the tables that will be used in the following steps.
-The triggers, functions and procedures are in the corresponding .sql file. 
-<b>queries.sql</b> contains some sample queries
+A Maven+JDBC+MySQL+JSP project to simulate hospital info system, including ward availability tracking, patient and doctor scheduling, billing calculating. 
+Features:
+- triggers for updating database
+- procedures & functions for populating data, scheduling, validation and billing.
+- Java servlets and JSP pages for front-end.
+
+Database related files are in src/main/sql and executed by maven plugin.
